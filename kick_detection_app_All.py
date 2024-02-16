@@ -3,8 +3,8 @@ import joblib
 import pandas as pd
 import xgboost
 
-scaler = joblib.load("models\scaler_All.h5")
-Model = joblib.load("models\model_All.h5")
+scaler = joblib.load("models/scaler_All.h5")
+Model = joblib.load("models/model_All.h5")
 Inputs=['TVD(ft)', 'BITSIZE(in)', 'NPHI(%)',
        'Corrected Bulk Density(gm/cc)', 'Deep Resistivity (Ohm)', 'ROP(M/hr)',
        'WOB(KLb)', 'RPM', 'Torque(lb.F)', 'Stand Pipe Pressure(Psi)',
