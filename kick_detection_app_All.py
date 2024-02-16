@@ -51,8 +51,8 @@ def main():
     # following lines create boxes in which user can enter data required to make prediction
     st.sidebar.title("Choose your Features") 
     MD = st.sidebar.slider('MD(mt)', min_value=0, max_value=100000, value=0, step=1)
-    TVD_M = st.sidebar.number_input('TVD(mt)')
-    TVD_FT = st.sidebar.number_input('TVD(ft)')
+    TVD_M = st.sidebar.slider('TVD(mt)', min_value=0, max_value=100000, value=0, step=1)
+    TVD_FT = st.sidebar.slider('TVD(ft)', min_value=0, max_value=100000, value=0, step=1)
     BITSIZE = st.sidebar.number_input('BITSIZE(in)')
     NPHI = st.sidebar.number_input('NPHI(%)')
     Corrected_Bulk_Density = st.sidebar.number_input('Corrected Bulk Density(gm/cc)')
@@ -77,7 +77,7 @@ def main():
         st.markdown(f'<h1 style="color:#33ff33;font-size:40px;text-align:center;border-style: solid;border-width:5px;border-color:#fbff00;">{result}</h1>', unsafe_allow_html=True)
    
    ## show resturant image
-    st.image('R.jfif')    
-     
+    #st.image('R.jfif')    
+     st.markdown(f'![image.png](attachment:image.png)', unsafe_allow_html=True)
 if __name__=='__main__': 
     main()
