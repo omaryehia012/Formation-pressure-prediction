@@ -78,6 +78,6 @@ def main():
    
    ## show resturant image
     #st.image('R.jfif')    
-     st.markdown(f'![image.png](attachment:image.png)', unsafe_allow_html=True)
+    st.markdown(f'![image.png](attachment:image.png)', unsafe_allow_html=True)
 if __name__=='__main__': 
     main()
