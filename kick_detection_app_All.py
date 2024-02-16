@@ -1,7 +1,6 @@
 import streamlit as st
 import joblib 
 import pandas as pd
-import xgboost
 
 scaler = joblib.load("models/scaler.h5")
 Model = joblib.load("model_All.h5")
