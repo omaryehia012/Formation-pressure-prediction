@@ -3,7 +3,7 @@ import joblib
 import pandas as pd
 
 scaler = joblib.load("models/scaler.h5")
-Model = joblib.load("model.h5")
+Model = joblib.load("models/model_All.h5")
 Inputs=['TVD(ft)', 'BITSIZE(in)', 'NPHI(%)',
        'Corrected Bulk Density(gm/cc)', 'Deep Resistivity (Ohm)', 'ROP(M/hr)',
        'WOB(KLb)', 'RPM', 'Torque(lb.F)', 'Stand Pipe Pressure(Psi)',
