@@ -76,8 +76,7 @@ def main():
         ## Print final Prediction 
         st.markdown(f'<h1 style="color:#33ff33;font-size:40px;text-align:center;border-style: solid;border-width:5px;border-color:#fbff00;">{result}</h1>', unsafe_allow_html=True)
    
-   ## show resturant image
-    #st.image('R.jfif')    
-    st.markdown(f'![image.png](attachment:image.png)', unsafe_allow_html=True)
+    ## show image
+    st.image('R.jfif')    
 if __name__=='__main__': 
     main()
