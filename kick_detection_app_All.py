@@ -37,22 +37,28 @@ def header(url):
 
 # this is the main function in which we define our webpage  
 def main():       
-    # front end elements of the web page 
+    # Front-end elements of the web page 
     html_temp = """ 
     <style>
-    body {
+    .stApp {
         background-image: url('R.jfif');
         background-size: cover;
         opacity: 0.9; /* Adjust the opacity as needed */
     }
     </style>
-    <div style ="background-color:black;padding:13px"> 
-    <h1 style ="color:white;text-align:center;"> Kick Detection System ML prediction App</h1> 
-    </div> 
+    <div class="stApp"> 
+        <div style ="background-color:black;padding:13px"> 
+            <h1 style ="color:white;text-align:center;">Kick Detection System ML prediction App</h1> 
+        </div>
+        <div style="padding: 20px;">  
+            <h2 style="color: white;">Input Parameters</h2>
+            <!-- Input fields go here -->
+        </div>
+    </div>
     """
     
-    # display the front end aspect
-    st.markdown(html_temp, unsafe_allow_html = True)
+    # Display the front-end aspect
+    st.markdown(html_temp, unsafe_allow_html=True)
     
     # Following lines create boxes in which the user can enter data required to make a prediction
     st.sidebar.title("Choose your Features")
@@ -85,5 +91,4 @@ def main():
     
 if __name__=='__main__': 
     main()
-
 
