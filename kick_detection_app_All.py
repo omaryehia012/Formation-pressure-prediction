@@ -101,7 +101,7 @@ def main():
         st.markdown(f'<h1 style="color:#33ff33;font-size:40px;text-align:center;border-style: solid;border-width:5px;border-color:#fbff00;">{result}</h1>', unsafe_allow_html=True)
    
     # Show restaurant image
-    st.image('R.jfif', use_column_width=True)  # Adjust 'use_column_width' as needed
+    #st.image('R.jfif', use_column_width=True)  # Adjust 'use_column_width' as needed
     
 if __name__=='__main__': 
     main()
