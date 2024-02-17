@@ -86,7 +86,7 @@ def main():
     
     # Sidebar for user input
     st.sidebar.title("Choose your Features")
-    TVD_FT = st.sidebar.slider('TVD(ft)', min_value=0, max_value=100000, value=0, step=1)
+    TVD_FT = st.sidebar.number_input('TVD(ft)')
     BITSIZE = st.sidebar.number_input('BITSIZE(in)')
     Porosity = st.sidebar.number_input('Porosity(%)')
     Corrected_Bulk_Density = st.sidebar.number_input('Corrected Bulk Density(gm/cc)')
