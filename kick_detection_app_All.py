@@ -116,14 +116,12 @@ def main():
         
         # Display result
         result_display = f"""
-                       <div style="background-color: #333333; padding: 20px; border-radius: 10px;">
-                    <h1 style="color: {color}; font-size: 40px; text-align: center; padding: 10px; border: 2px solid #ffffff; border-radius: 10px;">
-                        Formation Pressure: {result} <br>
-                        Hydrostatic Pressure: {PH} <br>
-                        <span style="color: #ffffff;">{Pred}</span>
-                    </h1>
-                </div>
-            """
+        <div style="background-color:#333333; padding:20px; border-radius:10px;">
+            <h1 style="color:white; font-size:40px; text-align:center;">Formation Pressure: <span style="color:{color};">{result}</span></h1>
+            <h1 style="color:white; font-size:40px; text-align:center;">Hydrostatic Pressure: {PH}</h1>
+            <h1 style="color:white; font-size:40px; text-align:center;">{Pred}</h1>
+        </div>
+        """
         st.markdown(result_display, unsafe_allow_html=True)
         
 
