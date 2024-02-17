@@ -40,24 +40,21 @@ def main():
     # front end elements of the web page 
     html_temp = """ 
     <style>
-    .background {
+    body {
         background-image: url('R.jfif');
         background-size: cover;
-        background-repeat: no-repeat;
         opacity: 0.9; /* Adjust the opacity as needed */
-        height: 100vh; /* Adjust the height as needed */
     }
     </style>
-    <div class="background">
     <div style ="background-color:black;padding:13px"> 
     <h1 style ="color:white;text-align:center;"> Kick Detection System ML prediction App</h1> 
-    </div>
+    </div> 
     """
     
     # display the front end aspect
     st.markdown(html_temp, unsafe_allow_html = True)
     
-    # Following lines create boxes in which users can enter data required to make predictions
+    # Following lines create boxes in which the user can enter data required to make a prediction
     st.sidebar.title("Choose your Features")
     TVD_FT = st.sidebar.number_input('TVD(ft)', min_value=0, max_value=100000, value=0, step=1)
     BITSIZE = st.sidebar.number_input('BITSIZE(in)')
@@ -70,11 +67,12 @@ def main():
     Torque = st.sidebar.number_input('Torque(lb.F)')
     Stand_Pipe_Pressure = st.sidebar.number_input('Stand Pipe Pressure(Psi)')
     Flow_In = st.sidebar.number_input('Flow In(GPM)')
+    #Temp_In = st.sidebar.number_input('Temp - In')
     Temp_Out = st.sidebar.number_input('Temp - Out')
     Total_Gas = st.sidebar.number_input('Total Gas(PPM)')
-    result =""
+    result = ""
           
-    # when 'Predict' is clicked, make the prediction and store it 
+    # When 'Predict' is clicked, make the prediction and store it 
     if st.sidebar.button("Predict"): 
         result = predict(TVD_FT,BITSIZE,NPHI,Corrected_Bulk_Density,Deep_Resistivity ,ROP,WOB,RPM,Torque,Stand_Pipe_Pressure,
                   Flow_In,Temp_Out,Total_Gas)
@@ -83,8 +81,9 @@ def main():
         st.markdown(f'<h1 style="color:#33ff33;font-size:40px;text-align:center;border-style: solid;border-width:5px;border-color:#fbff00;">{result}</h1>', unsafe_allow_html=True)
    
     # Show restaurant image
-    st.image('R.jfif', use_column_width=True)    
+    st.image('R.jfif', use_column_width=True)  # Adjust 'use_column_width' as needed
     
 if __name__=='__main__': 
     main()
+
 
