@@ -41,7 +41,7 @@ def main():
     html_temp = """
     <style>
         body {
-            background-image: url('https://pluspng.com/img-png/oil-rig-png-hd--2880.jpg');
+            background-image: url('https://www.diabetes.ca/getmedia/ca38f492-76dd-40ef-925f-392988fa7f1a/medical-chart-with-stethoscope.jpg?width=1200&height=801&ext=.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
