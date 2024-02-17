@@ -38,22 +38,36 @@ def header(url):
 # this is the main function in which we define our webpage  
 def main():       
     # Front-end elements of the web page 
-    html_temp = """ 
+    html_temp = """
     <style>
-    .stApp {
-        background-image: url('R.jfif');
-        background-size: cover;
-        opacity: 0.9; /* Adjust the opacity as needed */
-    }
+        body {
+            background-image: url('R.jfif');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 20px;
+        }
+        .header {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
     </style>
-    <div class="stApp"> 
-        <div style ="background-color:black;padding:13px"> 
-            <h1 style ="color:white;text-align:center;">Kick Detection System ML prediction App</h1> 
-        </div>
-        <div style="padding: 20px;">  
-            <h2 style="color: white;">Input Parameters</h2>
-            <!-- Input fields go here -->
-        </div>
+
+    <div class="header">
+        <h1>Kick Detection System ML Prediction App</h1>
+    </div>
+
+    <div class="container">
+        <!-- Add your Streamlit app content here -->
+        <h2>Input Parameters</h2>
+        <!-- Input fields go here -->
     </div>
     """
     
