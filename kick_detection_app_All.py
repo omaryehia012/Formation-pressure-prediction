@@ -37,23 +37,31 @@ def header(url):
 
 # this is the main function in which we define our webpage  
 def main():       
-    # Front-end elements of the web page 
+     # Front-end elements of the web page 
     html_temp = """
     <style>
         body {
             background-image: url('https://pluspng.com/img-png/oil-rig-png-hd--2880.jpg');
             background-size: cover;
         }
+        .container {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Adjust the opacity as needed */
+            border-radius: 10px;
+        }
         .header {
             background-color: rgba(0, 0, 0, 0.5);
             padding: 20px;
             color: white;
             text-align: center;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
         }
-        .container {
+        .card {
+            background-color: rgba(51, 170, 51, 0.1); /* Adjust the color and opacity as needed */
             padding: 20px;
-            background-color: rgba(255, 255, 255, 0.8); /* Adjust the opacity as needed */
             border-radius: 10px;
+            color: black; /* Adjust the text color as needed */
         }
     </style>
 
@@ -62,9 +70,10 @@ def main():
     </div>
 
     <div class="container">
-        <!-- Add your Streamlit app content here -->
-        <h2>Input Parameters</h2>
-        <!-- Input fields go here -->
+        <div class="card">
+            <h2>Iris</h2>
+            <p>Lencwadi futhi ibonisa ukuhlelwa kwenhlangano yoFakazi ngaphansi kweNdikimba Ebusayo, kuhlanganise namabandla anezindikimba zabadala, iKomiti Eyengamele [yeGatsha] yamalungu ayisikhombisa yakulelozwe, kanye nababonisi besifunda nabesigodi.</p>
+        </div>
     </div>
     """
     
