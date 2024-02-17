@@ -115,8 +115,17 @@ def main():
                 Pred = "Kick! Take necessary precautions"
         
         # Display result
-        st.markdown(f'<h1 style="color:white;font-size:40px;text-align:center;border-style: solid;border-width:2px;border-color:black;">Formation Pressure: {result} \n Hydrostatic Pressure: {PH} \n {Pred} </h1>', unsafe_allow_html=True)
-    # Show image
+        result_display = f"""
+                <h1 style="color:white; font-size:40px; text-align:center; border-style:solid; border-width:2px; border-color:black;">
+                    Formation Pressure: {result} <br>
+                    Hydrostatic Pressure: {PH} <br>
+                    {Pred}
+                </h1>
+            """
+        st.markdown(result_display, unsafe_allow_html=True)
+        
+
+# Show image
     #st.image('R.jfif', use_column_width=True) 
     
 if __name__=='__main__': 
