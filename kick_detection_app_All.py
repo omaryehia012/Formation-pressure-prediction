@@ -39,8 +39,8 @@ def header(url):
 def main():       
     # front end elements of the web page 
     html_temp = """ 
-    <div style ="background-color:yellow;padding:13px"> 
-    <h1 style ="color:black;text-align:center;"> Kick Detection System ML prediction App</h1> 
+    <div style ="background-color:black;padding:13px"> 
+    <h1 style ="color:white;text-align:center;"> Kick Detection System ML prediction App</h1> 
     </div> 
    """
     
