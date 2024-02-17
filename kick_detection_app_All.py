@@ -49,39 +49,17 @@ def main():
         }
         </style>
         """
+    st.markdown(page_element, unsafe_allow_html=True) 
         
-    st.markdown(page_element, unsafe_allow_html=True)   
-    # Front-end elements of the web page 
-    st.markdown("""
-    <style>
-        body {
-            background-image: url('https://pluspng.com/img-png/oil-rig-png-hd--2880.jpg');
-            background-size: cover;
-        }
-        .header {
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 20px;
-            color: white;
-            text-align: center;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-        }
-        .container {
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.8); /* Adjust the opacity as needed */
-            border-radius: 10px;
-        }
-        .card {
-            background-color: rgba(51, 170, 51, 0.1); /* Adjust the color and opacity as needed */
-            padding: 20px;
-            border-radius: 10px;
-            color: black; /* Adjust the text color as needed */
-        }
-    </style>
-    <div class="header">
-        <h1>Kick Detection System ML Prediction App</h1>
-    </div>
-    """, unsafe_allow_html=True)
+    # front end elements of the web page 
+    html_temp = """ 
+    <div style ="background-color:black;padding:13px"> 
+    <h1 style ="color:white;text-align:center;"> Kick Detection System ML prediction App</h1> 
+    </div> 
+   """
+    
+    # display the front end aspect
+    st.markdown(html_temp, unsafe_allow_html = True)
     
     # Sidebar for user input
     st.sidebar.title("Choose your Features")
