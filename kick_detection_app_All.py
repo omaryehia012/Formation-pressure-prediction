@@ -118,7 +118,7 @@ def main():
         
         # Display result
         result_display = f"""
-        <div style="background-color: rgba(6,71,186,0.3); padding:2px; border-radius:10px;">
+        <div style="background-color: rgba(6,71,51,0.3); padding:2px; border-radius:10px;">
             <h1 style="color:white; font-size:40px; text-align:center;">Formation Pressure: <span style="color:{color};">{result}</span></h1>
             <h1 style="color:white; font-size:40px; text-align:center;">Hydrostatic Pressure: {PH}</h1>
             <h1 style="color:white; font-size:40px; text-align:center;"><span style="color:{color};">{Pred}</span></h1>
