@@ -43,24 +43,17 @@ def main():
         body {
             background-image: url('https://pluspng.com/img-png/oil-rig-png-hd--2880.jpg');
             background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .content {
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.8); /* Adjust the opacity as needed */
-            border-radius: 10px;
         }
         .header {
             background-color: rgba(0, 0, 0, 0.5);
             padding: 20px;
             color: white;
             text-align: center;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
+        }
+        .container {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Adjust the opacity as needed */
+            border-radius: 10px;
         }
     </style>
 
@@ -68,7 +61,7 @@ def main():
         <h1>Kick Detection System ML Prediction App</h1>
     </div>
 
-    <div class="content">
+    <div class="container">
         <!-- Add your Streamlit app content here -->
         <h2>Input Parameters</h2>
         <!-- Input fields go here -->
