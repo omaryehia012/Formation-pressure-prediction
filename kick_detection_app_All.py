@@ -44,7 +44,7 @@ def main():
     page_element="""
         <style>
         [data-testid="stAppViewContainer"]{
-          background-image: url("https://cdn.wallpapersafari.com/88/75/cLUQqJ.jpg");
+          background-image: url("https://pluspng.com/img-png/oil-rig-png-hd--2880.jpg");
           background-size: cover;
         }
         </style>
@@ -108,7 +108,7 @@ def main():
         st.markdown(f'<h1 style="color:#33ff33;font-size:40px;text-align:center;border-style: solid;border-width:5px;border-color:#fbff00;">{result}</h1>', unsafe_allow_html=True)
    
     # Show image
-    st.image('R.jfif', use_column_width=True) 
+    #st.image('R.jfif', use_column_width=True) 
     
 if __name__=='__main__': 
     main()
