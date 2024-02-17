@@ -111,7 +111,7 @@ def main():
         # Determine kick detection
         if PH > result:
                 Pred = "No Kick detected.. Keep going"
-            else:
+        else:
                 Pred = "Kick! Take necessary precautions"
         
         # Display result
