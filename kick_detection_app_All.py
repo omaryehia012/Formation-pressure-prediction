@@ -69,12 +69,6 @@ def main():
         <h1>Kick Detection System ML Prediction App</h1>
     </div>
 
-    <div class="container">
-        <div class="card">
-            <h2>Iris</h2>
-            <p>Lencwadi futhi ibonisa ukuhlelwa kwenhlangano yoFakazi ngaphansi kweNdikimba Ebusayo, kuhlanganise namabandla anezindikimba zabadala, iKomiti Eyengamele [yeGatsha] yamalungu ayisikhombisa yakulelozwe, kanye nababonisi besifunda nabesigodi.</p>
-        </div>
-    </div>
     """
     
     # Display the front-end aspect
