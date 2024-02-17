@@ -86,7 +86,7 @@ def main():
     
     # Sidebar for user input
     st.sidebar.title("Choose your Features")
-    TVD_FT = st.sidebar.number_input('TVD(ft)', min_value=0, max_value=100000, value=0, step=1)
+    TVD_FT = st.sidebar.slider('TVD(ft)', min_value=0, max_value=100000, value=0, step=1)
     BITSIZE = st.sidebar.number_input('BITSIZE(in)')
     Porosity = st.sidebar.number_input('Porosity(%)')
     Corrected_Bulk_Density = st.sidebar.number_input('Corrected Bulk Density(gm/cc)')
@@ -99,6 +99,7 @@ def main():
     Flow_In = st.sidebar.number_input('Flow In(GPM)')
     Temp_Out = st.sidebar.number_input('Temp - Out')
     Total_Gas = st.sidebar.number_input('Total Gas(PPM)')
+    Mud_Density= st.sidebar.number_input('Mud Density(PPG)')   
     
     # Prediction button
     if st.sidebar.button("Predict"): 
@@ -106,7 +107,7 @@ def main():
                   Flow_In,Temp_Out,Total_Gas)
 
         # clculate Hydrostatic pressure
-        PH=.052* TVD_FT * Corrected_Bulk_Density
+        PH=.052* TVD_FT * Mud_Density
 
         # Determine kick detection
         if PH > result:
