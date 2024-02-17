@@ -108,14 +108,14 @@ def main():
         # clculate Hydrostatic pressure
         PH=.052* TVD_FT * Corrected_Bulk_Density
 
+        # Determine kick detection
         if PH > result:
-                Pred=" No Kick detected .. keep going"
-        else:
-                Pred=" Kick ! take your prequections"
-            
+                Pred = "No Kick detected.. Keep going"
+            else:
+                Pred = "Kick! Take necessary precautions"
+        
         # Display result
-        st.markdown(f'<h1 style="color:white;font-size:40px;text-align:center;border-style: solid;border-width:2px;border-color:black;">Formation Pressure \n {result} \n Hydrostatic Pressure \n {PH} \n {Pred} </h1>', unsafe_allow_html=True)
-   
+        st.markdown(f'<h1 style="color:white;font-size:40px;text-align:center;border-style: solid;border-width:2px;border-color:black;">Formation Pressure: {result} \n Hydrostatic Pressure: {PH} \n {Pred} </h1>', unsafe_allow_html=True)
     # Show image
     #st.image('R.jfif', use_column_width=True) 
     
