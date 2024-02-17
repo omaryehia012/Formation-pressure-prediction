@@ -34,21 +34,30 @@ def predict(TVD_FT,BITSIZE,NPHI,Corrected_Bulk_Density,Deep_Resistivity ,ROP,WOB
     result = Model.predict(scaler.transform(test_df))[0]
     return result
 
+# Function to style header
+def header(url):
+     st.markdown(f'<p style="background-color:#0066cc;color:#33ff33;font-size:24px;border-radius:2%;">{url}</p>', unsafe_allow_html=True)    
+
 # Main function to define the app layout and functionality
-def main():       
+def main(): 
+
+    page_element="""
+        <style>
+        [data-testid="stAppViewContainer"]{
+          background-image: url("https://pluspng.com/img-png/oil-rig-png-hd--2880.jpg");
+          background-size: cover;
+        }
+        </style>
+        """
+    st.markdown(page_element, unsafe_allow_html=True) 
+        
     # Front-end elements of the web page 
-    page_bg_img = '''
-    <style>
-    body {
-        background-image: url("https://pluspng.com/img-png/oil-rig-png-hd--2880.jpg");
-        background-size: cover;
-    }
-    </style>
-    '''
-    st.markdown(page_bg_img, unsafe_allow_html=True)
-    
     st.markdown("""
     <style>
+        body {
+            background-image: url('https://pluspng.com/img-png/oil-rig-png-hd--2880.jpg');
+            background-size: cover;
+        }
         .header {
             background-color: rgba(0, 0, 0, 0.5);
             padding: 20px;
@@ -74,6 +83,7 @@ def main():
     </div>
     """, unsafe_allow_html=True)
     
+    
     # Sidebar for user input
     st.sidebar.title("Choose your Features")
     TVD_FT = st.sidebar.number_input('TVD(ft)', min_value=0, max_value=100000, value=0, step=1)
@@ -94,12 +104,20 @@ def main():
     if st.sidebar.button("Predict"): 
         result = predict(TVD_FT,BITSIZE,NPHI,Corrected_Bulk_Density,Deep_Resistivity ,ROP,WOB,RPM,Torque,Stand_Pipe_Pressure,
                   Flow_In,Temp_Out,Total_Gas)
-        
+
+        # clculate Hydrostatic pressure
+        PH=.052* TVD_FT * Corrected_Bulk_Density
+
+        if PH > result:
+                Pred=" No Kick detected .. keep going"
+        else:
+                Pred=" Kick ! take your prequections"
+            
         # Display result
-        st.markdown(f'<h1 style="color:white;font-size:40px;text-align:center;border-style: solid;border-width:2px;border-color:black;">Formation Pressure \n {result}</h1>', unsafe_allow_html=True)
+        st.markdown(f'<h1 style="color:white;font-size:40px;text-align:center;border-style: solid;border-width:2px;border-color:black;">Formation Pressure \n {result} \n Hydrostatic Pressure \n {PH} \n {Pred} </h1>', unsafe_allow_html=True)
    
     # Show image
-    # st.image('R.jfif', use_column_width=True) 
+    #st.image('R.jfif', use_column_width=True) 
     
 if __name__=='__main__': 
     main()
