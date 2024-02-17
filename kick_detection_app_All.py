@@ -41,7 +41,7 @@ def main():
     html_temp = """
     <style>
         body {
-            background-image: url('R.jfif');
+            background-image: url('https://pluspng.com/img-png/oil-rig-png-hd--2880.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
