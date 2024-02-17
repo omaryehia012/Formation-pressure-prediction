@@ -106,7 +106,7 @@ def main():
                   Flow_In,Temp_Out,Total_Gas)
         
         # Display result
-        st.markdown(f'<h1 style="color:white;font-size:40px;text-align:center;border-style: solid;border-width:5px;border-color:#fbff00;">{result}</h1>', unsafe_allow_html=True)
+        st.markdown(f'<h1 style="color:white;font-size:40px;text-align:center;border-style: solid;border-width:2px;border-color:black;">{result}</h1>', unsafe_allow_html=True)
    
     # Show image
     #st.image('R.jfif', use_column_width=True) 
