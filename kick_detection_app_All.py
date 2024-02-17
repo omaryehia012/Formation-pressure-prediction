@@ -8,18 +8,18 @@ scaler = joblib.load("models/scaler_All.h5")
 Model = joblib.load("models/model_All.h5")
 
 # Define input features
-Inputs=['TVD(ft)', 'BITSIZE(in)', 'NPHI(%)',
+Inputs=['TVD(ft)', 'BITSIZE(in)', 'Porosity(%)',
         'Corrected Bulk Density(gm/cc)', 'Deep Resistivity (Ohm)', 'ROP(M/hr)',
         'WOB(KLb)', 'RPM', 'Torque(lb.F)', 'Stand Pipe Pressure(Psi)',
         'Flow In(GPM)','Temp - Out', 'Total Gas(PPM)']
 
 # Function to make prediction
-def predict(TVD_FT,BITSIZE,NPHI,Corrected_Bulk_Density,Deep_Resistivity ,ROP,WOB,RPM,Torque,Stand_Pipe_Pressure,
+def predict(TVD_FT,BITSIZE,Porosity,Corrected_Bulk_Density,Deep_Resistivity ,ROP,WOB,RPM,Torque,Stand_Pipe_Pressure,
                   Flow_In,Temp_Out,Total_Gas):
     test_df = pd.DataFrame(columns = Inputs,index=[0])
     test_df.at[0,"TVD(ft)"] = TVD_FT
     test_df.at[0,"BITSIZE(in)"] = BITSIZE
-    test_df.at[0,"NPHI(%)"] = NPHI
+    test_df.at[0,"Porosity(%)"] = Porosity
     test_df.at[0,"Corrected Bulk Density(gm/cc)"] = Corrected_Bulk_Density
     test_df.at[0,"Deep Resistivity (Ohm)"] = Deep_Resistivity
     test_df.at[0,"ROP(M/hr)"] = ROP
@@ -88,7 +88,7 @@ def main():
     st.sidebar.title("Choose your Features")
     TVD_FT = st.sidebar.number_input('TVD(ft)', min_value=0, max_value=100000, value=0, step=1)
     BITSIZE = st.sidebar.number_input('BITSIZE(in)')
-    NPHI = st.sidebar.number_input('NPHI(%)')
+    Porosity = st.sidebar.number_input('Porosity(%)')
     Corrected_Bulk_Density = st.sidebar.number_input('Corrected Bulk Density(gm/cc)')
     Deep_Resistivity = st.sidebar.number_input('Deep Resistivity (Ohm)')
     ROP = st.sidebar.number_input('ROP(M/hr)')
@@ -102,7 +102,7 @@ def main():
     
     # Prediction button
     if st.sidebar.button("Predict"): 
-        result = predict(TVD_FT,BITSIZE,NPHI,Corrected_Bulk_Density,Deep_Resistivity ,ROP,WOB,RPM,Torque,Stand_Pipe_Pressure,
+        result = predict(TVD_FT,BITSIZE,Porosity,Corrected_Bulk_Density,Deep_Resistivity ,ROP,WOB,RPM,Torque,Stand_Pipe_Pressure,
                   Flow_In,Temp_Out,Total_Gas)
 
         # clculate Hydrostatic pressure
