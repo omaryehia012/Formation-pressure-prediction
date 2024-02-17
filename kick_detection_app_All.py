@@ -39,7 +39,18 @@ def header(url):
      st.markdown(f'<p style="background-color:#0066cc;color:#33ff33;font-size:24px;border-radius:2%;">{url}</p>', unsafe_allow_html=True)    
 
 # Main function to define the app layout and functionality
-def main():       
+def main(): 
+
+     page_element="""
+        <style>
+        [data-testid="stAppViewContainer"]{
+          background-image: url("https://cdn.wallpapersafari.com/88/75/cLUQqJ.jpg");
+          background-size: cover;
+        }
+        </style>
+        """
+        
+        st.markdown(page_element, unsafe_allow_html=True)   
     # Front-end elements of the web page 
     st.markdown("""
     <style>
