@@ -41,7 +41,7 @@ def header(url):
 # Main function to define the app layout and functionality
 def main(): 
 
-     page_element="""
+    page_element="""
         <style>
         [data-testid="stAppViewContainer"]{
           background-image: url("https://cdn.wallpapersafari.com/88/75/cLUQqJ.jpg");
@@ -50,7 +50,7 @@ def main():
         </style>
         """
         
-        st.markdown(page_element, unsafe_allow_html=True)   
+    st.markdown(page_element, unsafe_allow_html=True)   
     # Front-end elements of the web page 
     st.markdown("""
     <style>
