@@ -47,11 +47,6 @@ def main():
             background-image: url('https://pluspng.com/img-png/oil-rig-png-hd--2880.jpg');
             background-size: cover;
         }
-        .container {
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.8); /* Adjust the opacity as needed */
-            border-radius: 10px;
-        }
         .header {
             background-color: rgba(0, 0, 0, 0.5);
             padding: 20px;
@@ -59,6 +54,11 @@ def main():
             text-align: center;
             border-top-left-radius: 10px;
             border-top-right-radius: 10px;
+        }
+        .container {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Adjust the opacity as needed */
+            border-radius: 10px;
         }
         .card {
             background-color: rgba(51, 170, 51, 0.1); /* Adjust the color and opacity as needed */
