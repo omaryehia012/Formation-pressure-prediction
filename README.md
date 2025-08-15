@@ -827,5 +827,3 @@ print({'formation_pressure': pf, 'hydrostatic_pressure': ph, 'status': status})
 - Verify artifact compatibility after dependency upgrades
 - Periodic re‑evaluation of feature importances and drift
 - Refresh documentation and screenshots under `Graphs/` as models evolve
-
-# Formation-pressure-prediction
